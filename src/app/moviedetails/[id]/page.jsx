@@ -1,5 +1,5 @@
 "use client";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { showMovieDetails } from "@/Utils/api/FetchApi";
 import Image from "next/image";
@@ -9,11 +9,12 @@ import { FormateRunTime } from "@/Components/Common/FormateRunTime/FormateRunTim
 import trailer_btn_play_icon from "../../../../public/img/trailer_btn_play_icon.svg";
 import MoviesTrailer from "@/Components/Common/MoviesTrailer/MoviesTrailer";
 import Header from "@/Components/Header/Header";
+import SimilarMovies from "@/Components/Common/SimilarMovies/SimilarMovies";
 
 const MovieDetails = () =>{
-    const {id} = useParams();
     const [movieDetails, setMovieDetails] = useState([]);
     const [trailerModalOpen, setTrailerModalOpen] = useState(false);
+    const {id} = useParams();
 
     useEffect(()=>{
         const getMovieDetails = async() =>{
@@ -102,6 +103,7 @@ const MovieDetails = () =>{
                     )
                 }
             </div>
+            <SimilarMovies />
         </>
     )
 }

@@ -8,9 +8,9 @@ const Header = ({setSearchMovie}) =>{
     const handleSearchMovie = (e) =>{
         setSearchMovie(e.target.value);
     }
-    console.log('rerender header');
+    // console.log('rerender header');
     return(
-        <div className="bg-[#fff] border-b border-b-solid border-b-[1px] border-b-[#eee] fixed left-[0px] right-[0px] w-full">
+        <div className="bg-[#fff] border-b border-b-solid border-b-[1px] z-[1] border-b-[#eee] fixed left-[0px] right-[0px] w-full">
             <div className="max-w-[1280px] mx-auto py-[10px] flex items-center justify-between">
                 <div>
                     <Image className="w-[50px]" src={registered_logo} alt="registered_logo" />

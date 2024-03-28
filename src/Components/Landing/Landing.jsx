@@ -7,12 +7,12 @@ import PopularMovies from "../PopularMovies/PopularMovies";
 
 const Landing = () =>{
     const [searchMovie, setSearchMovie] = useState("");
-    console.log('rerender landing component');
+    // console.log('rerender landing component');
     return(
         <>
             <Header setSearchMovie={setSearchMovie} />
             <Banner />
-            <PopularMovies searchMovie={searchMovie} />
+            <PopularMovies searchMovie={searchMovie}/>
         </>
     )
 }
