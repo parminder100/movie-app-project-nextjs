@@ -12,7 +12,7 @@ const Landing = () =>{
         <>
             <Header setSearchMovie={setSearchMovie} />
             <Banner />
-            <PopularMovies searchMovie={searchMovie}/>
+            <PopularMovies searchMovie={searchMovie} />
         </>
     )
 }

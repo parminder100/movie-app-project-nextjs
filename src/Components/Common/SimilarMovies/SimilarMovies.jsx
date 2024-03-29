@@ -6,6 +6,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
 import Link from "next/link";
+import "../SimilarMovies/SimilarMovies.css";
 
 const SimilarMovies = ({searchMovie}) =>{
     const [similarMoviesData, setSimilarMoviesData] = useState([]);
@@ -48,14 +49,14 @@ const SimilarMovies = ({searchMovie}) =>{
 
     const filteredMovies = searchMovie ? similarMoviesData.filter((movie)=>movie.title.toLowerCase().includes(searchMovie.toLowerCase())) : similarMoviesData;
     return(
-        <div className="pl-[34px] bg-[#111827]">
+        <div className="similar-movies-section pl-[34px] bg-[#111827]">
             <p className="text-[#fff] font-[600] text-[24px] mb-[18px]">Similar Movies</p>
-            <Carousel responsive={responsive}>
+            <Carousel responsive={responsive} autoPlay={true} infinite={!searchMovie}>
                 {
                     filteredMovies.map((movie,index)=>(
                         <Link key={index} href={`/moviedetails/${movie.id}`}>
                             <div className="mr-[15px]">
-                                <Image className="rounded-[8px] w-full" sizes="50vw" width={0} height={0} src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
+                                <Image className="rounded-[8px] w-full h-[372px]" sizes="50vw" width={0} height={0} src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
                                 <div className="p-[10px]">
                                     <p className="text-[#fff] font-[600] mt-[15px]">{movie.title}</p>
                                 </div>

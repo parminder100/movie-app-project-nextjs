@@ -53,7 +53,7 @@ const PopularMovies = ({searchMovie}) =>{
     // console.log('rerender popularMovies');
     return(
         <>
-            <div className='pt-[40px] pl-[44px] bg-[#141414]'>
+            <div className='pt-[40px] pl-[44px] max-md:pl-[15px] bg-[#141414]'>
                 <p className='mb-[15px] font-[600] text-[#fff] text-[30px]'>Popular Movies</p>
                 <Carousel responsive={responsive} autoPlay={true} infinite={!searchMovie} ref={(ref) => setCarouselRef(ref)}>
                     {filteredMovies.map((movie, index) => (

@@ -14,6 +14,7 @@ import SimilarMovies from "@/Components/Common/SimilarMovies/SimilarMovies";
 const MovieDetails = () =>{
     const [movieDetails, setMovieDetails] = useState([]);
     const [trailerModalOpen, setTrailerModalOpen] = useState(false);
+    const [searchMovie, setSearchMovie] = useState("");
     const {id} = useParams();
 
     useEffect(()=>{
@@ -42,7 +43,7 @@ const MovieDetails = () =>{
     }
     return(
         <>
-            <Header />
+            <Header setSearchMovie={setSearchMovie} />
             <div>
                 {
                     movieDetails && (
@@ -103,7 +104,7 @@ const MovieDetails = () =>{
                     )
                 }
             </div>
-            <SimilarMovies />
+            <SimilarMovies searchMovie={searchMovie} />
         </>
     )
 }
