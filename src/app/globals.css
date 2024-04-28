@@ -1,4 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ul{
+    padding-left: unset !important;
+}
+a{
+    color: inherit !important;
+    text-decoration: none !important;
+}

@@ -54,11 +54,11 @@ const SimilarMovies = ({searchMovie}) =>{
             <Carousel responsive={responsive} autoPlay={true} infinite={!searchMovie}>
                 {
                     filteredMovies.map((movie,index)=>(
-                        <Link key={index} href={`/moviedetails/${movie.id}`}>
+                        <Link className="text-inherit no-underline" key={index} href={`/moviedetails/${movie.id}`}>
                             <div className="mr-[15px]">
                                 <Image className="rounded-[8px] w-full h-[372px]" sizes="50vw" width={0} height={0} src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} alt={movie.title} />
                                 <div className="p-[10px]">
-                                    <p className="text-[#fff] font-[600] mt-[15px]">{movie.title}</p>
+                                    <p className="text-[#fff] font-[600] mb-[0px] mt-[15px]">{movie.title}</p>
                                 </div>
                             </div>
                         </Link>

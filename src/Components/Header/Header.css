@@ -1,0 +1,16 @@
+.registerModal .modal-dialog{
+    margin-top: 200px;
+    width: 428px;
+}
+.input-username{
+    background-image: url('../../../public/img/user_icon.svg');
+    background-position: center left 10px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+.input-password{
+    background-image: url('../../../public/img/password_icon.svg');
+    background-position: center left 10px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
